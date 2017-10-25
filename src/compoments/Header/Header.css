@@ -1,0 +1,14 @@
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    height:40px;
+    line-height:40px;
+    padding: 0 16px;
+    border-bottom: 1px solid #eee;
+}
+.header-container .fa{
+    display: inline-block;
+}
+.header-container .left-icon{
+    font-size: 22px;
+}
