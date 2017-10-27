@@ -1,0 +1,1 @@
+export const baseUrl = 'http://newsapi.gugujiankong.com/Handler.ashx';

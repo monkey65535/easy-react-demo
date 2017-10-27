@@ -8,14 +8,26 @@ class Header extends Component {
         super();
         this.state = {
             hasLogined:false,
-            userNickName:'',
+            username:'',
             userId:0
+        }
+    }
+    componentWillMount(){
+        const userinfo = window.sessionStorage.getItem('userinfo');
+        console.log(userinfo);
+        if(userinfo && userinfo !== ''){
+            let {username,userId} = JSON.parse(userinfo);
+            this.setState({
+                username,
+                userId,
+                hasLogined:true
+            })
         }
     }
     render() {
         //判断登录展示不同内容图标
-        const {hasLogined,userNickName} = this.state;
-        let logonType = hasLogined ? <Link><i className="fa fa-user-o"></i> {userNickName}</Link> : <Link to={`/login`} className="link"><i className="fa fa-user-circle-o"></i></Link>;
+        const {hasLogined,username} = this.state;
+        let logonType = hasLogined ? <Link><i className="fa fa-user-o"></i> {username}</Link> : <Link to={`/login`} className="link"><i className="fa fa-user-circle-o"></i></Link>;
 
         return (
             <div className={`header-container`}>

@@ -5,6 +5,7 @@
     line-height:40px;
     padding: 0 16px;
     border-bottom: 1px solid #eee;
+    background: #fff;
 }
 .header-container .fa{
     display: inline-block;
