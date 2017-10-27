@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {List, InputItem, Toast, Button} from 'antd-mobile';
-import {baseUrl} from '../../server/serverConfig';
 import Axios from 'axios';
 import {hashHistory} from 'react-router';
 
