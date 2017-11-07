@@ -1,0 +1,37 @@
+*{
+    box-sizing: border-box;
+}
+.list-container{
+    width: 100%;
+    padding: 10px;
+    margin-top: 40px;
+}
+.list-container .list-items{
+    display: flex;
+    color: #333;
+}
+.list-items .list-item-left{
+    flex:0 0 100px;
+    margin-right: 10px;
+}
+.list-items .list-item-right{
+    flex:1;
+    overflow: hidden;
+}
+.list-item-right .item-title{
+    margin-bottom: 10px;
+    word-break: break-all;
+}
+.list-item-right .tags{
+    font-size:12px;
+}
+.list-item-right .tags span{
+    color: #999;
+    display: inline-block;
+}
+.tags span:first-of-type{
+    color: #f00;
+    border:1px solid #f00;
+    padding: 0 2px;
+    margin-right: 10px;
+}

@@ -14,7 +14,7 @@ class Header extends Component {
     }
     componentWillMount(){
         const userinfo = window.sessionStorage.getItem('userinfo');
-        console.log(userinfo);
+        // console.log(userinfo);
         if(userinfo && userinfo !== ''){
             let {username,userId} = JSON.parse(userinfo);
             this.setState({
