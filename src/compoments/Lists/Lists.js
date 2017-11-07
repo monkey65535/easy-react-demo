@@ -15,7 +15,7 @@ class Lists extends Component {
     componentWillMount() {
         //    获取数据  "http://newsapi.gugujiankong.com/Handler.ashx?action=getnews&type=" + this.props.type + "&count=" + this.props.count
         Axios.get(`http://newsapi.gugujiankong.com/Handler.ashx?action=getnews&type=${this.props.type}&count=${this.props.count}`).then((res) => {
-            console.log(res.data);
+            // console.log(res.data);
             if (res.status === 200) {
                 this.setState({
                     newData: [...res.data]
@@ -27,7 +27,7 @@ class Lists extends Component {
     render() {
         const {newData} = this.state;
         let newsItems = newData.length > 0 ? newData.map((el) => {
-            const {title,date,type,uniquekey,thumbnail_pic_s} = el;
+            const {title,date,realtype,uniquekey,thumbnail_pic_s} = el;
             return (
                 <Link className={`list-items`} to={`details/${uniquekey}`} key={uniquekey}>
                     <div className="list-item-left">
@@ -36,13 +36,13 @@ class Lists extends Component {
                     <div className="list-item-right">
                         <h5 className="item-title">{title}</h5>
                         <div className="tags">
-                            <span className="tag-name">{type}</span>
-                            <span className="news-time">{type}</span>
+                            <span className="tag-name">{realtype}</span>
+                            <span className="news-time">{date}</span>
                         </div>
                     </div>
                 </Link>
             )
-        }) : (<Spin></Spin>);
+        }) : '暂无数据';
         return (
             <div className={`list-container`}>
                 {newsItems}

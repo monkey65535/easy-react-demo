@@ -3,6 +3,16 @@ import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import Lists from  '../Lists/Lists';
 
+import { Tabs, WhiteSpace, Badge } from 'antd-mobile';
+
+const tabs = [
+    { title: <Badge text={''}>头条</Badge> },
+    { title: <Badge text={''}>社会</Badge> },
+    { title: <Badge text={''}>国内</Badge> },
+    { title: <Badge text={''}>国际</Badge> },
+    { title: <Badge text={''}>娱乐</Badge> }
+];
+
 class Index extends Component {
     render() {
         // const settings = {
@@ -15,7 +25,18 @@ class Index extends Component {
         return (
             <div className={`index-container`}>
                 <Header/>
-                <Lists type='top' count={20} style={{marginTop:'20px'}}></Lists>
+                <div className="top-containert" style={{marginTop:'40px'}}>
+
+                    <Tabs tabs={tabs}
+                          initialPage={0}
+                    >
+                        <Lists type='top' count={20}></Lists>
+                        <Lists type='shehui' count={20}></Lists>
+                        <Lists type='guonei' count={20}></Lists>
+                        <Lists type='guoji' count={20}></Lists>
+                        <Lists type='yule' count={20}></Lists>
+                    </Tabs>
+                </div>
                 <Footer/>
             </div>
 
