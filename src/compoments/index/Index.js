@@ -2,8 +2,7 @@ import React, {Component} from 'react';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import Lists from  '../Lists/Lists';
-
-import { Tabs, WhiteSpace, Badge } from 'antd-mobile';
+import { Tabs, Badge } from 'antd-mobile';
 
 const tabs = [
     { title: <Badge text={''}>头条</Badge> },

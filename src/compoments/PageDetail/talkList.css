@@ -1,0 +1,30 @@
+.talklist-item{
+    margin: 10px;
+    border: 1px solid #eee;
+    padding: 0 6px;
+    overflow: hidden;
+    word-break: break-all;
+}
+.talklist-item .talk-list-header{
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    height:32px;
+    line-height:32px;
+    border-bottom:1px solid #eee;
+}
+.talk-list-header .talk-name{
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size:14px;
+}
+.talk-list-header .talk-time{
+    color: #999;
+    font-size: 12px;
+    flex: 0 0 auto;
+}
+.talklist-content{
+    padding: 6px 0;
+}

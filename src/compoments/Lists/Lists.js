@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {Link} from 'react-router';
 import './lists.css';
 import Axios from 'axios';
-import {Spin} from 'antd';
 
 class Lists extends Component {
     constructor() {
@@ -13,7 +12,6 @@ class Lists extends Component {
     }
 
     componentWillMount() {
-        //    获取数据  "http://newsapi.gugujiankong.com/Handler.ashx?action=getnews&type=" + this.props.type + "&count=" + this.props.count
         Axios.get(`http://newsapi.gugujiankong.com/Handler.ashx?action=getnews&type=${this.props.type}&count=${this.props.count}`).then((res) => {
             // console.log(res.data);
             if (res.status === 200) {
