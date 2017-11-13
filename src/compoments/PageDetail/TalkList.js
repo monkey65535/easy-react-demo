@@ -37,7 +37,7 @@ class TalkList extends Component {
         }) : '暂无评论'
         return (
             <div>
-                {this.props.uniquekey}
+                {/*{this.props.uniquekey}*/}
                 {news}
             </div>
 

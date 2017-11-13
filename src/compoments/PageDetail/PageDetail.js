@@ -3,14 +3,11 @@ import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import Detail from './Detail';
 import TalkList from './TalkList';
+import CommitTalk from './CommitTalk';
 
 import './pageDetail.css';
 
 class PageDetail extends Component {
-    constructor(){
-        super();
-    }
-
     render() {
         const {uniquekey} = this.props.params;
         return (
@@ -20,6 +17,7 @@ class PageDetail extends Component {
                     {/*{this.props.params.uniquekey}*/}
                     <Detail uniquekey={uniquekey}></Detail>
                     <TalkList uniquekey={uniquekey}></TalkList>
+                    <CommitTalk></CommitTalk>
                 </div>
                 <Footer></Footer>
             </div>

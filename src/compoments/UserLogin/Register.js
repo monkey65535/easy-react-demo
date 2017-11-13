@@ -51,6 +51,7 @@ class Register extends Component {
         });
         Axios.get(`http://newsapi.gugujiankong.com/Handler.ashx?action=register&username=userName&password=password&r_userName=${username}&r_password=${passWord}&r_confirmPassword=${confirmPassword}`).then((res) => {
             const {data} = res;
+            // eslint-disable-next-line
             if(data == true){
                 Toast.info('注册完成，即将跳转到首页',1);
 
