@@ -27,7 +27,7 @@ class Header extends Component {
     render() {
         //判断登录展示不同内容图标
         const {hasLogined,username} = this.state;
-        let logonType = hasLogined ? <Link><i className="fa fa-user-o"></i> {username}</Link> : <Link to={`/login`} className="link"><i className="fa fa-user-circle-o"></i></Link>;
+        let logonType = hasLogined ? <Link to='/userCenter'><i className="fa fa-user-o"></i> {username}</Link> : <Link to='/login' className="link"><i className="fa fa-user-circle-o"></i></Link>;
 
         return (
             <div className={`header-container`}>
